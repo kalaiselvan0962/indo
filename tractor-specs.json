@@ -1,0 +1,244 @@
+{
+  "tractors": {
+    "1020_DI": {
+      "name": "1020 DI",
+      "specs": {
+        "Engine": {
+          "H.P. Category": "20",
+          "Engine Make": "Field Marshal",
+          "Type": "Diesel, Four Stroke DI Engine",
+          "No. of Cylinders": "1",
+          "Bore/Stroke": "100/114 mm",
+          "Rated Speed": "2300 RPM",
+          "Max. Torque Speed": "1200 + 1400 RPM",
+          "Air Cleaner": "Oil Bath Type",
+          "Cooling System": "Water cooled"
+        },
+        "Transmission": {
+          "No. of Gear Speeds": "6 Forward 2 Reverse",
+          "Clutch System": "Single Clutch",
+          "Hyd. Pump": "Gear Type"
+        },
+        "Dimensions": {
+          "Length": "2520 mm",
+          "Width": "1050 mm",
+          "Height": "1240 mm (upto steering)",
+          "Min. Ground Clearance": "210 mm",
+          "Weight": "800 kg"
+        },
+        "Performance": {
+          "Lifting Capacity": "500 kg at Lower Link Ends",
+          "PTO Power (ps)": "12.92@2300 Engine RPM",
+          "PTO Speed": "540@2100 RPM"
+        }
+      }
+    },
+    "1026": {
+      "name": "1026",
+      "specs": {
+        "Engine": {
+          "H.P. Category": "26",
+          "Engine Model": "Mitsubishi",
+          "Type": "Diesel, Four Stroke IDI Engine",
+          "No. of Cylinders": "3",
+          "Bore/Stroke": "78/92 mm",
+          "Compression Ratio": "22:01",
+          "Rated Speed": "2700 RPM",
+          "Max. Torque Speed": "2000 RPM",
+          "Air Cleaner": "Dry Type",
+          "Fuel Pump": "Inline, Denso Japan",
+          "Cooling System": "Water cooled"
+        },
+        "Transmission": {
+          "No. of Gear Speeds": "6 Forward 2 Reverse",
+          "Steering": "Mechanical - Recirculating ball type (optional)"
+        },
+        "Dimensions": {
+          "Length": "2680 mm",
+          "Width": "1050 mm",
+          "Height": "1260 mm (upto steering)",
+          "Min. Ground Clearance": "210 mm",
+          "Weight": "844 kg"
+        }
+      }
+    },
+    "1026e": {
+      "name": "1026e",
+      "specs": {
+        "Engine": {
+          "Engine Power, Ps": "24.75",
+          "Rated RPM": "2500",
+          "No. of Cylinders": "3",
+          "Engine Volume": "1319",
+          "Max Torque, Nm": "76.3"
+        },
+        "Transmission": {
+          "Type": "Sliding Mesh",
+          "Number of Speeds": "6F+2R",
+          "Differential Lock": "Yes"
+        },
+        "Hydraulics": {
+          "Function": "Position and draft control",
+          "Lift Capacity": "500 Kgs",
+          "Steering": "Hydrostatic"
+        }
+      }
+    },
+    "2030_DI": {
+      "name": "2030 DI",
+      "specs": {
+        "Engine": {
+          "H.P. Range": "34",
+          "Type": "Diesel, Four Stroke Direct Injection",
+          "No. of Cylinders": "3",
+          "Bore/Stroke": "91.44/127 mm",
+          "Compression Ratio": "18.5:1",
+          "Rated Speed": "2000 RPM",
+          "Max. Torque Speed": "1200-1300 RPM"
+        },
+        "Transmission": {
+          "No. of Gear Speeds": "8 Forward 2 Reverse",
+          "Steering": "Mechanical - Recirculating ball type"
+        }
+      }
+    },
+    "2035_DI": {
+      "name": "2035 DI",
+      "specs": {
+        "Engine": {
+          "H.P. Range": "38",
+          "Type": "Diesel, Four Stroke Direct Injection",
+          "No. of Cylinders": "3",
+          "Bore/Stroke": "91.44/127 mm",
+          "Compression Ratio": "18.5:1",
+          "Rated Speed": "2000 RPM",
+          "Max. Torque Speed": "1200-1300 RPM"
+        },
+        "PTO": {
+          "No. of Splines": "6 / 6",
+          "PTO Speed": "1000 RPM / 540 RPM in Dual Clutch"
+        }
+      }
+    },
+    "2042_DI": {
+      "name": "2042 DI",
+      "specs": {
+        "Engine": {
+          "H.P. Range": "45",
+          "Type": "Diesel, Four Stroke Direct Injection",
+          "No. of Cylinders": "3",
+          "Bore/Stroke": "91.44/127 mm",
+          "Compression Ratio": "18.5:1",
+          "Rated Speed": "2000 RPM",
+          "Max. Torque Speed": "1200-1300 RPM"
+        },
+        "Dimensions": {
+          "Length": "3600 mm",
+          "Width": "1680 mm",
+          "Height": "1635 mm (upto steering)",
+          "Min. Ground Clearance": "390 mm",
+          "Weight": "1875 kg"
+        }
+      }
+    },
+    "3035_DI": {
+      "name": "3035 DI",
+      "specs": {
+        "Engine": {
+          "H.P. Range": "38",
+          "Type": "Diesel, Four Stroke Direct Injection",
+          "No. of Cylinders": "3",
+          "Bore/Stroke": "105/111 mm",
+          "Compression Ratio": "19:1",
+          "Rated Speed": "2100 RPM",
+          "Max. Torque Speed": "1200-1400 RPM",
+          "Air Cleaner": "Dry Type",
+          "Fuel Pump": "Inline, Make: Bosch India",
+          "Cooling System": "Water cooled"
+        },
+        "Transmission": {
+          "No. of Gear Speeds": "8 Forward 2 Reverse",
+          "Steering": "Mechanical - Recirculating ball type (Optional Power Steering)"
+        }
+      }
+    },
+    "3040_DI": {
+      "name": "3040 DI",
+      "specs": {
+        "Engine": {
+          "H.P. Range": "45",
+          "Type": "Diesel, Four Stroke Direct Injection",
+          "No. of Cylinders": "3",
+          "Bore/Stroke": "105/111 mm",
+          "Compression Ratio": "19:1",
+          "Rated Speed": "2100 RPM",
+          "Max. Torque Speed": "1200-1400 RPM"
+        },
+        "PTO": {
+          "No. of Splines": "6 / 6",
+          "PTO Speed": "1000 RPM / 540 RPM (Dual Clutch)"
+        }
+      }
+    },
+    "3048_DI": {
+      "name": "3048 DI",
+      "specs": {
+        "Configurations": {
+          "2WD": {
+            "H.P. Range": "50",
+            "Tyre Front": "6.00 x 16",
+            "Tyre Rear": "13.6 x 28",
+            "Wheel Track": "1355-1895 mm",
+            "Length": "3750 mm",
+            "Min. Turning radius": "3.5 m",
+            "Weight": "2160 kg"
+          },
+          "4WD": {
+            "H.P. Range": "50",
+            "Tyre Front": "8.00 x 18",
+            "Tyre Rear": "14.9 x 28",
+            "Wheel Track": "1310-1940 mm",
+            "Length": "3760 mm",
+            "Min. Turning radius": "4.0 m",
+            "Weight": "2370 kg"
+          }
+        },
+        "Common": {
+          "Type": "Diesel, Four Stroke Direct Injection",
+          "No. of Cylinders": "3",
+          "Steering": "Power Steering",
+          "Brake Type": "Oil Immersed Multiple disc (Dry optional)"
+        }
+      }
+    },
+    "3055_DI": {
+      "name": "3055 DI",
+      "specs": {
+        "Configurations": {
+          "2WD": {
+            "H.P. Range": "50",
+            "Tyre Front": "7.50x16",
+            "Tyre Rear": "14.9x28",
+            "Length": "3880 mm",
+            "Min. Turning Radius": "4.0 m",
+            "Weight": "2290 Kg"
+          },
+          "4WD": {
+            "H.P. Range": "50",
+            "Tyre Front": "9.50 x 24",
+            "Tyre Rear": "16.9 x 28",
+            "Length": "3840 mm",
+            "Min. Turning Radius": "4.5 m",
+            "Weight": "2380 kg"
+          }
+        },
+        "Common": {
+          "Type": "4 Stroke, Naturally aspirated, DI, Diesel Engine",
+          "No. of Cylinders": "Four",
+          "Steering": "Hydrostatic Power Steering",
+          "Brake Type": "Oil Immersed Brakes"
+        }
+      }
+    }
+  }
+}
