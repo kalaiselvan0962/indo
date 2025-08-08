@@ -9340,6 +9340,125 @@ Kapnoor, Kalaburagi, Karnataka 585104.</p>
   <button id="kannadaBtn" class="lang-btn">ಕನ್ನಡ</button>
 </div>
 
+
+
+<!-- Vertical Social Media Sidebar with Colorful Icons -->
+<div class="vertical-social-sidebar">
+    <ul class="social-media-list">
+        <li>
+            <a href='https://www.facebook.com/Indofarmkalaburagi/' class='social-icon facebook' title='Facebook' target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                <span class='sr-only'>Facebook</span>
+            </a>
+        </li>
+        <li>
+            <a href='https://www.instagram.com/kalburagitractors/' class='social-icon instagram' title='Instagram' target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-instagram" aria-hidden="true"></i>
+                <span class='sr-only'>Instagram</span>
+            </a>
+        </li>
+        <li>
+            <a href='#' class='social-icon youtube' title='YouTube' target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-youtube" aria-hidden="true"></i>
+                <span class='sr-only'>YouTube</span>
+            </a>
+        </li>
+        <li>
+            <a href='#' class='social-icon twitter' title='Twitter (X)' target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-twitter" aria-hidden="true"></i>
+                <span class='sr-only'>Twitter (X)</span>
+            </a>
+        </li>
+        <li>
+            <a href='https://wa.me/918867923444' class='social-icon whatsapp' title='WhatsApp' target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                <span class='sr-only'>WhatsApp</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<style>
+/* Vertical Social Media Sidebar Styles */
+.vertical-social-sidebar {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 999;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px 5px;
+    border-radius: 0 10px 10px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.social-media-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    background-color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+/* Colorful Icons */
+.social-icon.facebook i { color: #3b5998; }
+.social-icon.instagram i { 
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.social-icon.youtube i { color: #FF0000; }
+.social-icon.twitter i { color: #1DA1F2; }
+.social-icon.whatsapp i { color: #25D366; }
+
+.social-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .vertical-social-sidebar {
+        padding: 20px 8px;
+    }
+    
+    .social-icon {
+        width: 44px;
+        height: 44px;
+        font-size: 22px;
+    }
+}
+
+/* Accessibility */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+</style>
+
 <script>
   let translations = {};
   let currentLanguage = "en";
