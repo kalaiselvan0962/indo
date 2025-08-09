@@ -37,7 +37,6 @@
             background-attachment: fixed;
         }
 
-        /* Floating particles */
         .particle {
             position: fixed;
             border-radius: 50%;
@@ -48,7 +47,6 @@
             opacity: 0.15;
         }
 
-        /* New agricultural elements */
         .agri-element {
             position: fixed;
             z-index: -1;
@@ -82,14 +80,12 @@
             }
         }
 
-        /* Main container */
         .container {
             max-width: 800px;
             margin: 2rem auto;
             padding: 1.5rem;
         }
 
-        /* Form card */
         .form-card {
             background-color: rgba(255, 255, 255, 0.95);
             border-radius: 1rem;
@@ -116,7 +112,6 @@
             background: linear-gradient(90deg, var(--primary), var(--accent));
         }
 
-        /* Header */
         .form-header {
             text-align: center;
             margin-bottom: 2.5rem;
@@ -140,7 +135,6 @@
             font-size: 1.1rem;
         }
 
-        /* User info */
         .user-info {
             background: rgba(234, 244, 229, 0.7);
             padding: 1rem;
@@ -175,7 +169,6 @@
             text-decoration: underline;
         }
 
-        /* Form sections */
         .form-section {
             margin-bottom: 2rem;
             animation: fadeIn 0.8s ease-out forwards;
@@ -219,7 +212,6 @@
             color: var(--accent);
         }
 
-        /* Input fields */
         .input-field {
             width: 100%;
             padding: 1rem;
@@ -244,7 +236,6 @@
             opacity: 0.6;
         }
 
-        /* Radio buttons */
         .radio-options {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -320,7 +311,6 @@
             background: white;
         }
 
-        /* Buttons */
         .form-footer {
             display: flex;
             justify-content: space-between;
@@ -364,7 +354,6 @@
             transform: translateY(-2px);
         }
 
-        /* Disclaimer */
         .disclaimer {
             font-size: 0.875rem;
             color: var(--text-light);
@@ -373,7 +362,6 @@
             animation: fadeIn 1s ease-out;
         }
 
-        /* Modal */
         .modal {
             position: fixed;
             top: 0;
@@ -423,7 +411,6 @@
             color: var(--text-light);
         }
 
-        /* Responsive adjustments */
         @media (max-width: 768px) {
             .container {
                 padding: 1rem;
@@ -451,13 +438,13 @@
             }
         }
 
-        /* Animations for form sections */
         .form-section:nth-child(1) { animation-delay: 0.1s; }
         .form-section:nth-child(2) { animation-delay: 0.2s; }
         .form-section:nth-child(3) { animation-delay: 0.3s; }
         .form-section:nth-child(4) { animation-delay: 0.4s; }
         .form-section:nth-child(5) { animation-delay: 0.5s; }
         .form-section:nth-child(6) { animation-delay: 0.6s; }
+        .form-section:nth-child(7) { animation-delay: 0.7s; }
     </style>
 </head>
 <body>
@@ -473,7 +460,7 @@
                 <a href="#" class="switch-account">Switch account</a>
             </div>
             
-            <form id="contactForm" action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSd_8Rvoovqh2hZfDin1nCKM7D0G3DIBaPGgHffg4YN1OwXpyg/formResponse" method="POST" target="hiddenFrame">
+            <form id="contactForm" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSd_8Rvoovqh2hZfDin1nCKM7D0G3DIBaPGgHffg4YN1OwXpyg/formResponse" method="POST" target="hiddenFrame">
                 <iframe name="hiddenFrame" style="display:none;"></iframe>
                 
                 <!-- Full Name -->
@@ -481,6 +468,14 @@
                     <div class="question-container">
                         <label class="question-title required-field">Full Name</label>
                         <input type="text" class="input-field" name="entry.1633920210" required placeholder="Enter your full name">
+                    </div>
+                </div>
+                
+                <!-- Email Address -->
+                <div class="form-section">
+                    <div class="question-container">
+                        <label class="question-title required-field">Email Address</label>
+                        <input type="email" class="input-field" name="entry.1045781291" required placeholder="Enter your email address">
                     </div>
                 </div>
                 
@@ -492,7 +487,6 @@
                                placeholder="Enter your 10-digit mobile number" 
                                pattern="[0-9]{10}"
                                title="Please enter a 10-digit mobile number">
-                        <input type="hidden" name="entry.1045781291" value="10"> <!-- Validation for 10 digits -->
                     </div>
                 </div>
                 
@@ -559,6 +553,11 @@
                         </div>
                     </div>
                 </div>
+                
+                <!-- Required hidden fields for Google Forms -->
+                <input type="hidden" name="fvv" value="1">
+                <input type="hidden" name="pageHistory" value="0">
+                <input type="hidden" name="fbzx" value="-9199999999999999999">
                 
                 <div class="form-footer">
                     <button type="button" class="btn clear-btn" id="clearForm">Clear form</button>
@@ -665,8 +664,8 @@
             }, 1500);
         });
         
-        // Handle form submission
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
+        // Enhanced form submission handler
+        document.getElementById('contactForm').addEventListener('submit', async function(e) {
             e.preventDefault();
             
             // Show confirmation modal
@@ -675,16 +674,31 @@
             // Create celebration elements
             createCelebrationElements();
             
-            // Submit the form after a short delay
-            setTimeout(() => {
+            try {
+                // Submit using fetch as primary method
+                const formData = new FormData(this);
+                
+                // Add timestamp and other required fields
+                formData.append('submit', 'Submit');
+                
+                // Submit via fetch
+                await fetch(this.action, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    body: new URLSearchParams(formData)
+                });
+                
+                // Also submit the traditional way as fallback
                 this.submit();
-            }, 100);
+            } catch (error) {
+                console.error('Form submission error:', error);
+                // Fallback to traditional submission
+                this.submit();
+            }
         });
         
         function closeModal() {
             document.getElementById('confirmationModal').classList.remove('active');
-            // Optionally redirect after closing modal
-            // window.location.href = 'thank-you.html';
         }
         
         // Create celebration elements when form is submitted
