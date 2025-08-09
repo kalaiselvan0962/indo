@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Indo Farm Kalaburagi – Contact Us</title>
+    <title>Indo Farm Kalaburagi – Contact Us</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -476,6 +476,7 @@
             <form id="contactForm" action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSd_8Rvoovqh2hZfDin1nCKM7D0G3DIBaPGgHffg4YN1OwXpyg/formResponse" method="POST" target="hiddenFrame">
                 <iframe name="hiddenFrame" style="display:none;"></iframe>
                 
+                <!-- Full Name -->
                 <div class="form-section">
                     <div class="question-container">
                         <label class="question-title required-field">Full Name</label>
@@ -483,13 +484,19 @@
                     </div>
                 </div>
                 
+                <!-- Mobile Number -->
                 <div class="form-section">
                     <div class="question-container">
                         <label class="question-title required-field">Mobile Number</label>
-                        <input type="tel" class="input-field" name="entry.227649005" required placeholder="Enter your mobile number" pattern="[0-9]{10}">
+                        <input type="tel" class="input-field" name="entry.227649005" required 
+                               placeholder="Enter your 10-digit mobile number" 
+                               pattern="[0-9]{10}"
+                               title="Please enter a 10-digit mobile number">
+                        <input type="hidden" name="entry.1045781291" value="10"> <!-- Validation for 10 digits -->
                     </div>
                 </div>
                 
+                <!-- Location -->
                 <div class="form-section">
                     <div class="question-container">
                         <label class="question-title required-field">Location</label>
@@ -497,6 +504,7 @@
                     </div>
                 </div>
                 
+                <!-- Interested In -->
                 <div class="form-section">
                     <div class="question-container">
                         <label class="question-title required-field">Interested In</label>
@@ -520,6 +528,7 @@
                     </div>
                 </div>
                 
+                <!-- Tractor Model -->
                 <div class="form-section">
                     <div class="question-container">
                         <label class="question-title">Tractor Model</label>
@@ -527,6 +536,7 @@
                     </div>
                 </div>
                 
+                <!-- Best Time to Contact -->
                 <div class="form-section">
                     <div class="question-container">
                         <label class="question-title required-field">Best Time to Contact</label>
@@ -659,18 +669,22 @@
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
+            // Show confirmation modal
             document.getElementById('confirmationModal').classList.add('active');
             
-            setTimeout(() => {
-                e.target.submit();
-            }, 100);
-            
+            // Create celebration elements
             createCelebrationElements();
+            
+            // Submit the form after a short delay
+            setTimeout(() => {
+                this.submit();
+            }, 100);
         });
         
         function closeModal() {
             document.getElementById('confirmationModal').classList.remove('active');
-            window.location.href = 'index.html';
+            // Optionally redirect after closing modal
+            // window.location.href = 'thank-you.html';
         }
         
         // Create celebration elements when form is submitted
